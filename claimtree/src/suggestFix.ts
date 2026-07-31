@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { Issue } from './types.js';
 
-const anthropic = new Anthropic(); // reads ANTHROPIC_API_KEY from env
+const anthropic = new Anthropic(); 
 
 
 export async function suggestFix(issue: Issue, claimText: string): Promise<string> {
