@@ -1,0 +1,124 @@
+:root {
+  --bg: #f1efe8;
+  --bg-dot: rgba(24, 25, 22, 0.09);
+  --panel: #f8f7f2;
+  --ink: #181916;
+  --ink-soft: #6b6a62;
+  --line: #d8d5c9;
+  --accent: #4b6353;
+  --accent-bg: #e6eae4;
+  --error: #b3402f;
+  --error-bg: #f3e3df;
+  --warn: #a97a2e;
+  --warn-bg: #f2e8d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--bg-dot) 1px, transparent 1px);
+  background-size: 14px 14px;
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.bracket-panel {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 20px;
+}
+
+.bracket-panel::before,
+.bracket-panel::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--accent);
+  border-style: solid;
+}
+
+.bracket-panel::before {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+.bracket-panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+button.tech-btn {
+  font-family: inherit;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  padding: 10px 18px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+button.tech-btn:hover {
+  background: var(--accent);
+}
+
+button.tech-btn:disabled {
+  background: var(--line);
+  color: var(--ink-soft);
+  cursor: not-allowed;
+}
+
+button.tech-btn-ghost {
+  font-family: inherit;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 5px 10px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+button.tech-btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+textarea.tech-input {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.7;
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 16px;
+  width: 100%;
+  resize: vertical;
+}
+
+textarea.tech-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
